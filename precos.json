@@ -1,6 +1,6 @@
 {
-  "pro3":  "R$ 109,90 ou 12x de R$16,65 sem acréscimo",
-  "smart2": "R$ 199,90 ou 12x de R$16,65 sem acréscimo",
-  "air2":  "R$ 53,91 ou 12x de R$4,49 sem acréscimo",
-  "mini2": "R$ 23,31"
+  "pro3":  { "avista": "R$ 109,90", "parcelas": 12, "valorParcela": "R$ 16,65" },
+  "smart2":{ "avista": "R$ 199,90", "parcelas": 12, "valorParcela": "R$ 16,65" },
+  "air2":  { "avista": "R$ 53,91",  "parcelas": 12, "valorParcela": "R$ 4,49"  },
+  "mini2": { "avista": "R$ 23,31",  "parcelas": null, "valorParcela": null      }
 }
