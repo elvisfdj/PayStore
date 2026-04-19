@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Máquinas Mercado Pago — Revendedor Oficial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!--
+  =====================================================================
+  ✏️  PARA ATUALIZAR OS PREÇOS:
+
+  1. Abra o arquivo  precos.json  no seu repositório GitHub
+  2. Clique no lápis (editar)
+  3. Mude os valores:
+       "pro3":   "R$ 299,90",
+       "smart2": "R$ 499,90",
+       "air2":   "R$ 149,90",
+       "mini2":  "R$ 99,90"
+  4. Clique em  Commit changes  — pronto, o site atualiza sozinho!
+
+  Para adicionar/remover produtos ou trocar links, edite o array
+  PRODUTOS abaixo.
+  =====================================================================
+-->
+<script>
+const PRODUTOS = [
+  {
+    id:    "pro3",
+    nome:  "Point Pro 3",
+    link:  "https://mpago.li/24pJrR2",
+    img:   "Point_Pro_3.png",
+    ativo: true
+  },
+  {
+    id:    "smart2",
+    nome:  "Point Smart 2",
+    link:  "https://mpago.li/1B7Qxvg",
+    img:   "Point_Smart_2.png",
+    ativo: true
+  },
+  {
+    id:    "air2",
+    nome:  "Point Air 2",
+    link:  "https://mpago.li/2NyZfGZ",
+    img:   "Point_Air_2.png",
+    ativo: true
+  },
+  {
+    id:    "mini2",
+    nome:  "Point Mini NFC 2",
+    link:  "https://mpago.li/2sPPZgz",
+    img:   "Point_Mini_NFC_2.png",
+    ativo: true
+  }
+];
+</script>
+
+<!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-logo">PAY<span>.</span>STORE</div>
+  <div class="nav-badge">Revendedor Oficial Verificado</div>
+</nav>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-eyebrow">
+    <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+    Compra segura via Mercado Livre
+  </div>
+  <h1>MAQUININHA<br><em>MERCADO PAGO</em><br>NO SEU NEGÓCIO</h1>
+  <p class="hero-sub">Adquira diretamente com um revendedor oficial cadastrado. Todas as transações são gerenciadas 100% pela plataforma Mercado Livre — com proteção total para você.</p>
+  <div class="hero-cta">
+    <a href="#maquinas" class="btn-primary">Ver Máquinas</a>
+    <a href="#oficial" class="btn-outline">Por que comprar aqui?</a>
+  </div>
+  <div class="trust-strip">
+    <div class="trust-item">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Pagamento protegido pelo Mercado Livre
+    </div>
+    <div class="trust-item">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      Entrega rápida
+    </div>
+    <div class="trust-item">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/></svg>
+      Sem taxa na primeira compra
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAND ════════════════════════════════════════════════ -->
+<div class="trust-band reveal">
+  <div class="trust-band-icon">
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#1a6bff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  </div>
+  <div class="trust-band-text"><h3>Compra 100% segura</h3><p>Gerenciada pela plataforma Mercado Livre</p></div>
+  <div class="divider-v"></div>
+  <div class="trust-band-icon">
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#1a6bff" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+  </div>
+  <div class="trust-band-text"><h3>Revendedor Oficial Cadastrado</h3><p>Parceiro verificado Mercado Pago</p></div>
+  <div class="divider-v"></div>
+  <div class="trust-band-icon">
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#1a6bff" stroke-width="2"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+  </div>
+  <div class="trust-band-text"><h3>Garantia de fábrica</h3><p>Nota fiscal e suporte incluídos</p></div>
+</div>
+
+<!-- ═══ MACHINES ══════════════════════════════════════════════════ -->
+<section id="maquinas">
+  <div class="machines-header reveal">
+    <div>
+      <div class="section-label">Catálogo</div>
+      <h2 class="section-title">ESCOLHA SUA<br>MÁQUINA</h2>
+    </div>
+    <p class="section-sub">Cada botão direciona para o anúncio oficial no Mercado Livre, com garantia de compra protegida.</p>
+  </div>
+  <div class="machines-grid" id="grid">
+    <!-- skeleton enquanto carrega os preços -->
+    <div class="skeleton"></div>
+    <div class="skeleton"></div>
+    <div class="skeleton"></div>
+    <div class="skeleton"></div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ══════════════════════════════════════════════ -->
+<section id="como-funciona">
+  <div class="reveal">
+    <div class="section-label">Processo</div>
+    <h2 class="section-title">COMO FUNCIONA</h2>
+  </div>
+  <div class="steps-grid">
+    <div class="step reveal"><div class="step-num">01</div><h4>Escolha sua máquina</h4><p>Navegue pelo catálogo e clique no modelo que melhor se encaixa no seu negócio.</p></div>
+    <div class="step reveal"><div class="step-num">02</div><h4>Compra no Mercado Livre</h4><p>Você é direcionado para o anúncio oficial. Toda a transação é processada e protegida pela plataforma.</p></div>
+    <div class="step reveal"><div class="step-num">03</div><h4>Receba em casa</h4><p>Entrega rápida pelo Mercado Envios com rastreamento em tempo real.</p></div>
+    <div class="step reveal"><div class="step-num">04</div><h4>Comece a vender</h4><p>Aceite cartão de débito, crédito, Pix e muito mais direto na sua maquininha.</p></div>
+  </div>
+</section>
+
+<!-- ═══ OFICIAL ════════════════════════════════════════════════════ -->
+<section id="oficial">
+  <div class="oficial-inner">
+    <div class="oficial-badge-block reveal">
+      <div class="oficial-badge-outer">
+        <div class="oficial-badge-inner">
+          <svg width="52" height="52" fill="none" viewBox="0 0 24 24" stroke="#1a6bff" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="oficial-badge-label">Revendedor Oficial</div>
+    </div>
+    <div class="oficial-text reveal">
+      <h2>POR QUE COMPRAR<br>COM A GENTE?</h2>
+      <p>Sou revendedor oficial cadastrado no programa de parceiros do Mercado Pago. Todos os seus dados, pagamentos e garantias são gerenciados diretamente pela infraestrutura do Mercado Livre — com toda a segurança que você já conhece.</p>
+      <div class="oficial-chips">
+        <div class="chip"><span>✓</span> Parceiro verificado</div>
+        <div class="chip"><span>✓</span> Suporte pós-venda</div>
+        <div class="chip"><span>✓</span> Garantia de fábrica</div>
+        <div class="chip"><span>✓</span> Nota fiscal incluída</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="reveal">
+    <div class="section-label">Dúvidas</div>
+    <h2 class="section-title">PERGUNTAS<br>FREQUENTES</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">Minha compra é segura?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>Sim. Ao clicar em qualquer botão você é redirecionado para o anúncio dentro do Mercado Livre. Todo o processo de pagamento, entrega e garantia é gerenciado pela plataforma com a proteção total do Mercado Pago.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Quem é o vendedor?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>Sou um revendedor oficial cadastrado no programa de parceiros do Mercado Pago. Você pode verificar minha reputação diretamente no perfil do anúncio dentro do Mercado Livre.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Tem garantia do produto?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>Sim. Todos os produtos possuem garantia de fábrica e estão cobertos pela Proteção ao Comprador do Mercado Livre.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Qual é o prazo de entrega?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>O prazo é informado no anúncio no momento da compra, variando por região. O envio é feito pelo Mercado Envios com rastreamento completo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">PAY<span>.</span>STORE</div>
+  <p>Revendedor Oficial Mercado Pago • Todas as compras são processadas e protegidas pela plataforma Mercado Livre. Este site é operado de forma independente por um parceiro cadastrado.</p>
+</footer>
+
+<!-- ═══ CSS ════════════════════════════════════════════════════════ -->
+<style>
+  :root {
+    --black:#0a0a0a; --deep:#111318; --blue:#1a6bff;
+    --blue-light:#3d8bff; --white:#f5f7ff; --gray:#8a93a8;
+    --border:rgba(255,255,255,0.07);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");background-size:150px;pointer-events:none;z-index:999;opacity:.5}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 5%;background:rgba(10,10,10,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+  .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.12em}
+  .nav-logo span{color:var(--blue)}
+  .nav-badge{display:flex;align-items:center;gap:8px;background:rgba(26,107,255,0.12);border:1px solid rgba(26,107,255,0.3);border-radius:100px;padding:6px 14px;font-size:.75rem;font-weight:500;color:var(--blue-light)}
+  .nav-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 6px var(--blue);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 5% 80px;position:relative;overflow:hidden}
+  .hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 50%,black 40%,transparent 100%)}
+  .hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(26,107,255,0.15) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(26,107,255,0.1);border:1px solid rgba(26,107,255,0.25);border-radius:100px;padding:7px 18px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-light);margin-bottom:28px;position:relative;z-index:1;animation:fadeUp .7s ease both}
+  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,9vw,7.5rem);line-height:.95;letter-spacing:.04em;position:relative;z-index:1;animation:fadeUp .7s .12s ease both}
+  .hero h1 em{font-style:normal;color:var(--blue)}
+  .hero-sub{max-width:520px;color:var(--gray);font-size:1.05rem;line-height:1.7;margin:24px auto 40px;position:relative;z-index:1;animation:fadeUp .7s .24s ease both}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;animation:fadeUp .7s .36s ease both}
+  .btn-primary{padding:14px 32px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 0 24px rgba(26,107,255,0.35)}
+  .btn-primary:hover{background:var(--blue-light);transform:translateY(-2px);box-shadow:0 0 36px rgba(26,107,255,0.55)}
+  .btn-outline{padding:14px 32px;background:transparent;color:var(--white);border:1px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:500;cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s}
+  .btn-outline:hover{border-color:rgba(26,107,255,0.4);background:rgba(26,107,255,0.06)}
+  .trust-strip{display:flex;gap:32px;flex-wrap:wrap;justify-content:center;margin-top:64px;position:relative;z-index:1;animation:fadeUp .7s .48s ease both}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--gray)}
+  .trust-item svg{color:var(--blue);flex-shrink:0}
+
+  .trust-band{background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 5%;display:flex;align-items:center;justify-content:center;gap:24px;text-align:center;flex-wrap:wrap}
+  .trust-band-icon{width:48px;height:48px;background:rgba(26,107,255,0.12);border:1px solid rgba(26,107,255,0.3);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .trust-band-text h3{font-size:1rem;font-weight:600}
+  .trust-band-text p{font-size:.82rem;color:var(--gray);margin-top:2px}
+  .divider-v{width:1px;height:40px;background:var(--border)}
+
+  section{padding:100px 5%}
+  .section-label{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+  .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:.04em;line-height:1;margin-bottom:16px}
+  .section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:480px}
+
+  #maquinas{background:var(--black)}
+  .machines-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:56px}
+  .machines-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+
+  /* skeleton */
+  .skeleton{background:var(--deep);border:1px solid var(--border);border-radius:16px;height:360px;animation:shimmer 1.5s infinite}
+  @keyframes shimmer{0%,100%{opacity:.4}50%{opacity:.8}}
+
+  .machine-card{background:var(--deep);border:1px solid var(--border);border-radius:16px;padding:28px 24px 24px;display:flex;flex-direction:column;gap:14px;transition:border-color .25s,transform .2s,box-shadow .25s;position:relative;overflow:hidden}
+  .machine-card:hover{border-color:rgba(26,107,255,0.35);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.5),0 0 0 1px rgba(26,107,255,0.15)}
+  .machine-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,107,255,0.05) 0%,transparent 60%);opacity:0;transition:opacity .3s}
+  .machine-card:hover::before{opacity:1}
+  .card-img-wrap{display:flex;align-items:center;justify-content:center;height:160px}
+  .card-img{max-height:160px;max-width:100%;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(26,107,255,0.2));transition:transform .3s}
+  .machine-card:hover .card-img{transform:scale(1.05)}
+  .card-name{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:.06em;color:var(--white)}
+  .card-price{display:flex;flex-direction:column;gap:1px}
+  .card-price small{font-size:.65rem;color:var(--gray);text-transform:uppercase;letter-spacing:.12em}
+  .card-price strong{font-size:1.9rem;font-weight:700;color:var(--white);line-height:1}
+  .card-cta{display:block;padding:13px;background:rgba(26,107,255,0.1);border:1px solid rgba(26,107,255,0.25);border-radius:8px;color:var(--blue-light);font-weight:600;font-size:.9rem;text-align:center;text-decoration:none;transition:background .2s,border-color .2s;margin-top:auto}
+  .card-cta:hover{background:rgba(26,107,255,0.22);border-color:rgba(26,107,255,0.5);color:#fff}
+
+  #como-funciona{background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:40px;margin-top:60px}
+  .step-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:rgba(26,107,255,0.12);line-height:1;margin-bottom:16px}
+  .step h4{font-size:1.05rem;font-weight:600;margin-bottom:8px}
+  .step p{font-size:.88rem;color:var(--gray);line-height:1.65}
+
+  #oficial{background:linear-gradient(120deg,#0a0a0a 0%,#0d1b2e 100%);border-top:1px solid var(--border)}
+  .oficial-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:60px;flex-wrap:wrap}
+  .oficial-badge-block{flex-shrink:0;text-align:center}
+  .oficial-badge-outer{width:140px;height:140px;border-radius:50%;background:conic-gradient(var(--blue) 0deg 120deg,rgba(26,107,255,0.15) 120deg 360deg);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 0 48px rgba(26,107,255,0.3);animation:rotateBadge 12s linear infinite}
+  @keyframes rotateBadge{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  .oficial-badge-inner{width:118px;height:118px;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center}
+  .oficial-badge-inner svg{animation:rotateBadge 12s linear infinite reverse}
+  .oficial-badge-label{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-light)}
+  .oficial-text h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:.04em;margin-bottom:14px}
+  .oficial-text p{color:var(--gray);line-height:1.7;font-size:.95rem;margin-bottom:20px}
+  .oficial-chips{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{padding:6px 14px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:100px;font-size:.78rem;color:var(--gray);display:flex;align-items:center;gap:6px}
+  .chip span{color:var(--blue-light)}
+
+  #faq{background:var(--black)}
+  .faq-list{max-width:680px;margin-top:48px}
+  .faq-item{border-bottom:1px solid var(--border)}
+  .faq-question{width:100%;background:none;border:none;color:var(--white);font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:500;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .2s}
+  .faq-question:hover{color:var(--blue-light)}
+  .faq-icon{width:22px;height:22px;flex-shrink:0;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--blue);transition:transform .25s}
+  .faq-answer{overflow:hidden;max-height:0;transition:max-height .35s ease}
+  .faq-answer p{padding-bottom:20px;color:var(--gray);font-size:.9rem;line-height:1.7}
+  .faq-item.open .faq-icon{transform:rotate(45deg)}
+  .faq-item.open .faq-answer{max-height:300px}
+
+  footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+  .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.12em}
+  .footer-logo span{color:var(--blue)}
+  footer p{font-size:.78rem;color:var(--gray);max-width:420px;line-height:1.6}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.visible{opacity:1;transform:none}
+
+  @media(max-width:600px){
+    .trust-band{flex-direction:column;gap:24px}
+    .divider-v{display:none}
+    .oficial-inner{gap:36px}
+    footer{flex-direction:column}
+  }
+</style>
+
+<!-- ═══ JS ═════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+
+  // ── Busca precos.json e renderiza os cards ─────────────────────
+  fetch('precos.json?v=' + Date.now())          // ?v= evita cache antigo
+    .then(r => r.json())
+    .then(precos => renderCards(precos))
+    .catch(() => renderCards({}));              // se falhar, mostra R$ --
+
+  function renderCards(precos) {
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+
+    PRODUTOS.filter(p => p.ativo).forEach(p => {
+      const preco = precos[p.id] || 'R$ --';
+      const card = document.createElement('div');
+      card.className = 'machine-card reveal';
+      card.innerHTML = `
+        <div class="card-img-wrap">
+          <img class="card-img" src="${p.img}" alt="${p.nome}" />
+        </div>
+        <div class="card-name">${p.nome}</div>
+        <div class="card-price">
+          <small>Preço</small>
+          <strong>${preco}</strong>
+        </div>
+        <a href="${p.link}" class="card-cta" target="_blank" rel="noopener">
+          Comprar agora →
+        </a>
+      `;
+      grid.appendChild(card);
+    });
+
+    iniciarReveal();
+  }
+
+  // ── FAQ accordion ──────────────────────────────────────────────
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ── Scroll reveal ──────────────────────────────────────────────
+  function iniciarReveal() {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+      obs.observe(el);
+    });
+  }
+  iniciarReveal();
+
+})();
+</script>
+
+</body>
+</html>
